@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Our Little Love Story ❤️</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="hearts-canvas"></canvas>
+
+<!-- ================= NAVIGATION ================= -->
+<nav class="nav" id="mainNav">
+  <div class="nav-inner">
+    <a href="#" class="nav-brand" data-nav="home">Us<span class="brand-dot">.</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#" data-nav="home" class="nav-link active">Home</a></li>
+      <li><a href="#" data-nav="memories" class="nav-link">Memories</a></li>
+      <li><a href="#" data-nav="journey" class="nav-link">Journey</a></li>
+      <li><a href="#" data-nav="about" class="nav-link">About Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ================= HOME / LANDING ================= -->
+<section class="view view-home active" id="view-home">
+  <div class="home-glow"></div>
+  <div class="home-sparkles" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <!-- Four keepsake photos around the landing-page message. Kept in the HTML
+       so they remain visible even if JavaScript is unavailable. -->
+  <div class="home-float-photos" id="homeFloatPhotos" aria-hidden="true">
+    <img class="home-float-photo hero-slot-1" src="images/hero/school-selfie.jpg" alt="" style="object-position: 62% center" fetchpriority="high">
+    <img class="home-float-photo hero-slot-2" src="images/hero/beach-selfie.jpg" alt="" style="object-position: center center" fetchpriority="high">
+    <img class="home-float-photo hero-slot-3" src="images/hero/funny-selfie.jpg" alt="" style="object-position: center 42%" fetchpriority="high">
+    <img class="home-float-photo hero-slot-4" src="images/hero/close-selfie.jpg" alt="" style="object-position: center 36%" fetchpriority="high">
+    <img class="home-float-photo hero-slot-5" src="images/hero/memory-20260929.jpg" alt="" style="object-position: center 38%" fetchpriority="high">
+     <img class="home-float-photo hero-slot-6" src="images/hero/memory-20261018.jpg" alt="" style="object-position: center 42%" fetchpriority="high">
+    <img class="home-float-photo hero-slot-7" src="images/hero/memory-20261023a.jpg" alt="" style="object-position: center 38%" fetchpriority="high">
+    <img class="home-float-photo hero-slot-8" src="images/hero/memory-20261023b.jpg" alt="" style="object-position: center 38%" fetchpriority="high">
+  </div>
+
+  <div class="home-content">
+    <p class="home-eyebrow">A story written in moments</p>
+    <div class="home-heart-wrap">
+      <span class="heart-ring"></span>
+      <span class="heart-ring heart-ring-2"></span>
+    </div>
+    <h1 class="home-title">Our Little Love Story <span class="heart-inline">❤️</span></h1>
+    <p class="home-subtitle">Every picture holds a memory. Every month holds a story.</p>
+    <div class="btn-wrap">
+      <span class="btn-pulse"></span>
+      <button class="btn-primary" id="openMemoriesBtn">
+        <span>Open Our Memories</span>
+        <span class="btn-heart">💕</span>
+      </button>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span></span>
+  </div>
+</section>
+
+<!-- ================= MEMORIES (MONTH GRID) ================= -->
+<section class="view view-memories" id="view-memories">
+  <div class="section-head reveal">
+    <p class="section-eyebrow">Our Memories</p>
+    <h2 class="section-title">All Months, One Love</h2>
+    <p class="section-sub">Choose a chapter of our year to relive.</p>
+  </div>
+  <div class="month-grid" id="monthGrid"></div>
+</section>
+
+<!-- ================= MONTH DETAIL PAGE ================= -->
+<section class="view view-month" id="view-month">
+  <button class="back-btn" id="backToMonths">
+    <span class="back-arrow">←</span> All Memories
+  </button>
+
+  <div class="month-hero reveal">
+    <p class="month-hero-eyebrow" id="monthEyebrow">Chapter</p>
+    <h2 class="month-hero-title" id="monthTitle">Month 2026 ❤️</h2>
+    <p class="month-hero-sub" id="monthCount">0 beautiful memories</p>
+  </div>
+
+  <div class="gallery" id="gallery"></div>
+
+  <div class="message-card reveal" id="messageCard">
+    <div class="message-header">
+      <span class="message-icon">💌</span>
+      <h3>A Little Message For You</h3>
+    </div>
+    <p class="message-text" id="messageText"></p>
+  </div>
+</section>
+
+<!-- ================= JOURNEY / TIMELINE ================= -->
+<section class="view view-journey" id="view-journey">
+  <div class="section-head reveal">
+    <p class="section-eyebrow">Our Journey</p>
+    <h2 class="section-title">The Road We've Walked ❤️</h2>
+    <p class="section-sub">A few moments that shaped our story so far.</p>
+  </div>
+  <div class="timeline" id="timeline"></div>
+</section>
+
+<!-- ================= ABOUT US ================= -->
+<section class="view view-about" id="view-about">
+  <div class="about-wrap reveal">
+    <p class="section-eyebrow">About Us</p>
+    <h2 class="section-title">Two Hearts, One Story</h2>
+    <p class="about-text">
+      This little corner of the internet exists for one reason: to keep our moments from fading.
+      Every photo tucked inside these months, every note written for you it's all a small way of saying
+      that I notice, I remember, and I'm grateful for every ordinary day that became something worth keeping.
+    </p>
+    <p class="about-text">
+      Here's to the months already lived, and to every one still waiting for us.
+    </p>
+    <div class="about-signature">— With all my heart</div>
+  </div>
+</section>
+
+<!-- ================= LIGHTBOX ================= -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous">‹</button>
+  <div class="lightbox-stage">
+    <div class="lightbox-frame">
+      <img src="" alt="Memory" id="lightboxImg" class="lightbox-img">
+    </div>
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+  </div>
+  <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next">›</button>
+</div>
+
+<audio id="bgAudio" src="audio/photograph.mp3" loop autoplay preload="auto"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
