@@ -64,14 +64,8 @@ const memories = {
   "May 2026": {
     message: "I was so happy during this month becuase daghan natag mga struggle na na overcome together and look at us now we are still together thats why i am so happy and grateful to have you in my life.",
     photos: [
-      "images/hero/school-selfie.jpg",
-      "images/hero/beach-selfie.jpg",
-      "images/hero/memory-20261018.jpg",
-      "images/hero/memory-20261023b.jpg",
-      "images/hero/funny-selfie.jpg",
-      "images/hero/close-selfie.jpg",
-      "images/hero/memory-20260929.jpg",
-      "images/hero/memory-20261023a.jpg"
+      "images/may/photo1.jpg",
+      "images/may/photo2.jpg"
     ]
   },
   "June 2026": {
@@ -150,15 +144,24 @@ const memories = {
   },
   "October 2026": {
     message: "October wrapped us in cozy evenings and quiet gratitude. I never get tired of choosing you, over and over again.",
-    photos: []
+    photos: [
+      "images/october/photo1.jpg",
+      "images/october/photo2.jpg"
+    ]
   },
   "November 2026": {
     message: "November made me reflect on how far we've come. Out of everything I'm thankful for this year, you're at the very top of the list.",
-    photos: []
+    photos: [
+      "images/november/photo1.jpg",
+      "images/november/photo2.jpg"
+    ]
   },
   "December 2026": {
     message: "December closed out the year the way it started — with you. Here's to everything we built these past twelve months, and everything still ahead of us.",
-    photos: []
+    photos: [
+      "images/december/photo1.jpg",
+      "images/december/photo2.jpg"
+    ]
   }
 };
 

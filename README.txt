@@ -26,8 +26,9 @@ HOW TO ADD YOUR OWN PHOTOS
        ]
      }
 
-   October, November, and December currently have no photos. Their cards
-   show "Unlock Memories" with a decorative heart until you add photos.
+   Photos are already organized into month folders. The May, October,
+   November, and December galleries use the photo1.jpg and photo2.jpg files
+   in their matching folders.
 
 HOW TO CHANGE THE HOME PAGE FLOATING PHOTOS
 -----------------------------------------------
@@ -55,12 +56,11 @@ Drop an mp3 file into the /audio folder and name it "our-song.mp3"
 filename). The music never autoplays — the person visiting the site
 has to press the floating music button themselves.
 
-CURRENT PLACEHOLDER IMAGES
------------------------------
-The 24 images currently inside /images are auto-generated placeholder
-graphics (soft gradients with the month name on them) so the site
-looks complete out of the box. Replace them with real photos whenever
-you're ready — the site will look best once they're swapped in.
+HOME PAGE FLOATING PHOTOS
+-------------------------
+The images in /images/hero are decorative photos for the home page. They
+are separate from the month galleries and are selected in the `heroPhotos`
+array in script.js.
 
 FILE STRUCTURE
 ---------------
